@@ -1,0 +1,79 @@
+@mixin window-border-image($color, $top, $right, $bottom, $left) {
+    border-style: solid;
+    border-width: $top + px $right + px $bottom + px $left + px;
+    -moz-border-image: url(#{$imagePath}/window/#{$color}.png) $top $right $bottom $left repeat;
+    -webkit-border-image: url(#{$imagePath}/window/#{$color}.png) $top $right $bottom $left repeat;
+    -o-border-image: url(#{$imagePath}/window/#{$color}.png) $top $right $bottom $left repeat;
+    border-image: url(#{$imagePath}/window/#{$color}.png) $top $right $bottom $left fill repeat;
+}
+
+.interface {
+    width: 100%;
+    height: 100%;
+
+    .overlay {
+        display: none;
+
+        position: absolute;
+        z-index: 99998;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .window {
+        position: absolute;
+
+        display: block;
+
+        background: transparent;
+        background-clip: border-box;  
+
+        .title {
+            position: absolute;
+            top: -26px;
+            left: 0;
+
+            width: 100%;
+            height: 17px;
+
+            text-align: center;
+
+            * {
+                display: inline-block;
+
+                font-size: 11px;
+                line-height: 17px;
+                color: #FFFFFF;
+
+                margin: 0;
+                padding: 0 8px;
+                
+            }
+        }
+
+        .content {
+            background: #FFFFFF;
+        }
+    }
+
+    .window.blue {
+        @include window-border-image("blue", 31, 20, 21, 12)
+
+        .title *{
+            background: #408CAF;
+        }
+    }
+}
+
+.interface.hotelview {
+    background: url(#{$imagePath}/hotelview/#{$hotelviewTheme}/background_left.png) left bottom no-repeat,
+        url(#{$imagePath}/hotelview/#{$hotelviewTheme}/background_right.png) right bottom no-repeat,
+        url(#{$imagePath}/hotelview/#{$hotelviewTheme}/background.png) left top repeat;
+}
+
+@import "loader"
