@@ -1,7 +1,7 @@
 {
-  "name": "HabboJS-Client",
+  "name": "Game-Client",
   "version": "1.0",
-  "description": "",
+  "description": "A MMOCC-JS project Game Client",
   "author": "Jos Piek",
   "devDependencies": {
     "gulp": "^3.9.1",

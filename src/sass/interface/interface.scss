@@ -70,10 +70,10 @@
     }
 }
 
-.interface.hotelview {
-    background: url(#{$imagePath}/hotelview/#{$hotelviewTheme}/background_left.png) left bottom no-repeat,
-        url(#{$imagePath}/hotelview/#{$hotelviewTheme}/background_right.png) right bottom no-repeat,
-        url(#{$imagePath}/hotelview/#{$hotelviewTheme}/background.png) left top repeat;
+.interface.background {
+    background: url(#{$imagePath}/backgrounds/#{$backgroundTheme}/background_left.png) left bottom no-repeat,
+        url(#{$imagePath}/backgrounds/#{$backgroundTheme}/background_right.png) right bottom no-repeat,
+        url(#{$imagePath}/backgrounds/#{$backgroundTheme}/background.png) left top repeat;
 }
 
 @import "loader"
