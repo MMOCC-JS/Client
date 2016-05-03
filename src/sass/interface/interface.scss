@@ -31,7 +31,7 @@
         display: block;
 
         background: transparent;
-        background-clip: border-box;  
+        background-clip: border-box;
 
         .title {
             position: absolute;
@@ -68,6 +68,22 @@
             background: #408CAF;
         }
     }
+
+    .window.black {
+        @include window-border-image("black", 31, 20, 21, 12)
+
+        .title *{
+            background: #303030;
+        }
+    }
+
+    .window.white {
+        @include window-border-image("white", 31, 20, 21, 12)
+
+        .title *{
+            background: #C9C9C9;
+        }
+    }
 }
 
 .interface.background {
@@ -76,4 +92,5 @@
         url(#{$imagePath}/backgrounds/#{$backgroundTheme}/background.png) left top repeat;
 }
 
-@import "loader"
+@import "loader";
+@import "sidebar";

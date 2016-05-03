@@ -1,9 +1,10 @@
 doctype html
 html
     head
-        title HabboJS
+        title MMOCC-JS Game-Client
         link(rel="stylesheet", href="index.css")
-    body
+    body(class="interface background")
         include interface/interface.jade
 
+        script(src="libraries/pixi.min.js")
         script(src="index.js")

@@ -1,0 +1,88 @@
+$sidebarWidth: 68px;
+
+.interface .window.sidebar {
+    z-index: 99997;
+    left: 0;
+    top: 0;
+
+    width: $sidebarWidth;
+    height: 100%;
+
+    box-shadow: 2px 0px 0px 0px rgba(0, 0, 0, 0.50);
+
+    .content {
+        width: $sidebarWidth - 2;
+        height: 100%;
+
+        border-right: 2px solid #4C4C4C;
+        background: #2E2E2E;
+
+        .sidebar-icon {
+            width: $sidebarWidth;
+            height: $sidebarWidth;
+
+            background: #FAC903;
+
+            box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.50);
+
+            text-align: center;
+            line-height: $sidebarWidth;
+
+            * {
+                display: inline-block;
+
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        .sidebar-arrow {
+            width: $sidebarWidth;
+            height: 8px;
+
+            background: url(#{$imagePath}/sidebar/icon-arrow.png) center bottom no-repeat;
+        }
+
+        .sidebar-item {
+            width: $sidebarWidth - 12;
+            height: auto;
+
+            margin: 16px 6px;
+            padding: 50px 0 0 0;
+
+            border-radius: 3px;
+
+            font-size: 11px;
+            text-align: center;
+            color: #FFFFFF;
+            font-weight: bold;
+            cursor: pointer;
+            text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+
+            &.sidebar-navigator {
+                background: url(#{$imagePath}/sidebar/navigator.png) left 0 no-repeat;
+
+                &:hover {
+                    background: url(#{$imagePath}/sidebar/navigator.png) right 0 no-repeat;
+                }
+            }
+
+            &.sidebar-shop {
+                background: url(#{$imagePath}/sidebar/shop.png) left 0 no-repeat;
+
+                &:hover {
+                    background: url(#{$imagePath}/sidebar/shop.png) right 0 no-repeat;
+                }
+            }
+
+            &.sidebar-inventory {
+                background: url(#{$imagePath}/sidebar/inventory.png) left 0 no-repeat;
+
+                &:hover {
+                    background: url(#{$imagePath}/sidebar/inventory.png) right 0 no-repeat;
+                }
+            }
+
+        }
+    }
+}
