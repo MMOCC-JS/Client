@@ -1,6 +1,6 @@
 {
   "name": "Game-Client",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "A MMOCC-JS project Game Client",
   "author": "Jos Piek",
   "devDependencies": {
