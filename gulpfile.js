@@ -12,6 +12,15 @@ var gulp = require('gulp'),
 var production = gutil.env.production,
     outputDir = 'builds/' + (production ? 'production' : 'development');
 
+var filesToMove = [
+    './resources/badges/**/*.*',
+    './resources/gamedata/**/*.*',
+    './resources/icons/**/*.*',
+    './resources/images/**/*.*',
+    './resources/libraries/**/*.*',
+    './resources/spritesheets/*.*'
+];
+
 gulp.task('jade', function() {
     return gulp.src('src/templates/index.jade')
         .pipe(jade())
@@ -39,7 +48,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('move', function() {
-    gulp.src('resources/**/*.*', { base: './resources/' })
+    gulp.src(filesToMove, { base: './resources/' })
         .pipe(gulp.dest(outputDir));
 });
 
